@@ -92,7 +92,7 @@ data CToken = CTokLParen   !PosLength            -- `('
             | CTokEnum     !PosLength            -- `enum'
             | CTokExtern   !PosLength            -- `extern'
             | CTokFloat    !PosLength            -- `float'
-            | CTokFloat128 !PosLength            -- `__float128'
+            | CTokFloat128 !PosLength            -- `_Float128'
             | CTokFor      !PosLength            -- `for'
             | CTokGeneric  !PosLength            -- `_Generic'
             | CTokGoto     !PosLength            -- `goto'
@@ -333,7 +333,7 @@ instance Show CToken where
   showsPrec _ (CTokEnum     _  ) = showString "enum"
   showsPrec _ (CTokExtern   _  ) = showString "extern"
   showsPrec _ (CTokFloat    _  ) = showString "float"
-  showsPrec _ (CTokFloat128 _  ) = showString "__float128"
+  showsPrec _ (CTokFloat128 _  ) = showString "_Float128"
   showsPrec _ (CTokFor      _  ) = showString "for"
   showsPrec _ (CTokGeneric  _  ) = showString "_Generic"
   showsPrec _ (CTokGoto     _  ) = showString "goto"
